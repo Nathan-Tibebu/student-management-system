@@ -15,7 +15,8 @@ public class Main {
                 case 1 -> addStudent();
                 case 2 -> viewStudents();
                 case 3 -> searchStudent();
-                case 4 -> deleteStudent();
+                case 4 -> deleteStudent();   
+                case 5 -> updateStudent();
                 case 0 -> System.out.println("Exiting...");
                 default -> System.out.println("Invalid choice");
             }
@@ -28,6 +29,7 @@ public class Main {
         System.out.println("2. View Students");
         System.out.println("3. Search Student");
         System.out.println("4. Delete Student");
+        System.out.println("5. Update Student");
         System.out.println("0. Exit");
         System.out.print("Choose: ");
     }
@@ -77,4 +79,22 @@ public class Main {
         students.removeIf(s -> s.id == id);
         System.out.println("Delete operation completed.");
     }
+    static void updateStudent() {
+    System.out.print("Enter ID to update: ");
+    int id = scanner.nextInt();
+    scanner.nextLine(); // consume newline
+
+    for (Student s : students) {
+        if (s.id == id) {
+            System.out.print("Enter new name: ");
+            s.name = scanner.nextLine();
+            System.out.print("Enter new age: ");
+            s.age = scanner.nextInt();
+            System.out.println("Student updated successfully.");
+            return;
+        }
+    }
+    System.out.println("Student not found.");
+}
+
 }
