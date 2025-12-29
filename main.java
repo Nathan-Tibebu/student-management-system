@@ -21,6 +21,18 @@ public class Main {
                 default -> System.out.println("Invalid choice");
             }
         } while (choice != 0);
+        int choice;
+    while (true) {
+     System.out.print("Choose: ");
+      if (scanner.hasNextInt()) {
+        choice = scanner.nextInt();
+        break;
+    } else {
+        System.out.println("Invalid input. Enter a number.");
+        scanner.next(); // discard invalid input
+    }
+}
+
     }
 
     static void showMenu() {
