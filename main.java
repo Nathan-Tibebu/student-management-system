@@ -44,13 +44,21 @@ public class Main {
 
         System.out.print("Enter Age: ");
         int age = scanner.nextInt();
-
+        for (Student s : students) {
+        if (s.id == id) {
+        System.out.println("ID already exists. Student not added.");
+        return;
         students.add(new Student(id, name, age));
         System.out.println("Student added successfully.");
+        
+    }
+}
+
     }
 
     static void viewStudents() {
-        if (students.isEmpty()) {
+        if (stufor
+                    ts.isEmpty()) {
             System.out.println("No students found.");
             return;
         }
