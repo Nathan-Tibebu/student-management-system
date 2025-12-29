@@ -1,18 +1,5 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
-class Student {
-    int id;
-    String name;
-    int age;
-
-    Student(int id, String name, int age) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-    }
-}
-
 public class Main {
     static ArrayList<Student> students = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
